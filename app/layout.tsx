@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next'
-import { Space_Grotesk, Inter } from 'next/font/google'
+import { Archivo_Black, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({ 
+const archivoBlack = Archivo_Black({ 
+  weight: "400",
   subsets: ["latin"],
   variable: '--font-sans'
 })
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background">
-      <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${archivoBlack.variable} ${inter.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
