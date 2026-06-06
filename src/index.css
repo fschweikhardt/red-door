@@ -92,7 +92,7 @@
   }
 }
 
-/* Subtle dot grid texture overlay */
+/* Dot grid texture overlay */
 .noise-texture {
   position: relative;
 }
@@ -100,8 +100,8 @@
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.5px, transparent 2.5px);
+  background-size: 25px 25px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }

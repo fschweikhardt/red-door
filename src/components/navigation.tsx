@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import logo from "@/components/ui/RDLogo_DoorOnly.png"
 
 const navItems = [
   { label: "Work", href: "#work" },
@@ -22,13 +23,17 @@ export function Navigation() {
       <nav className="flex items-center justify-between px-4 py-4 md:px-8">
         <a 
           href="#" 
-          className="text-xl font-bold tracking-tight text-foreground"
+          className="block"
           onClick={(e) => {
             e.preventDefault()
             window.scrollTo({ top: 0, behavior: "smooth" })
           }}
         >
-          CRAFT<span className="text-accent">.</span>
+          <img
+            src={logo}
+            alt="Red Door Church"
+            className="h-16 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -37,7 +42,7 @@ export function Navigation() {
             <li key={item.href}>
               <button
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-300"
+                className="text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
               >
                 {item.label}
               </button>
