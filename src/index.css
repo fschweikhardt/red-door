@@ -105,3 +105,34 @@
   pointer-events: none;
   z-index: 0;
 }
+
+/* Layered hero title: offset outline + foreground fill */
+.hero-title-line {
+  position: relative;
+  display: block;
+  --hero-stroke: 0.02em;
+}
+
+.hero-title-outline,
+.hero-title-fill {
+  display: block;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.hero-title-outline {
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: var(--hero-stroke) var(--accent);
+  transform: translate(var(--hero-offset-x, 0.04em), var(--hero-offset-y, 0.04em));
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.hero-title-fill {
+  position: relative;
+  /* color: var(--foreground);
+  -webkit-text-stroke: var(--hero-stroke) var(--accent);
+  -webkit-text-fill-color: var(--foreground); */
+}
