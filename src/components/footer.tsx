@@ -20,7 +20,7 @@ export function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-300"
+                className="text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-white/90">
             © {new Date().getFullYear()} Craft Studio. All rights reserved.
           </div>
         </div>

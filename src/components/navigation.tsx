@@ -3,10 +3,9 @@ import { Menu, X } from "lucide-react"
 import logo from "@/components/ui/RDLogo_DoorOnly.png"
 
 const navItems = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "News", href: "#basic-info" },
+  { label: "Co-op", href: "#about" },
+  { label: "Kids", href: "#services" },
 ]
 
 export function Navigation() {
@@ -32,7 +31,7 @@ export function Navigation() {
           <img
             src={logo}
             alt="Red Door Church"
-            className="h-16 w-auto"
+            className="lg:pl-8 lg:h-20 h-16 w-auto"
           />
         </a>
 

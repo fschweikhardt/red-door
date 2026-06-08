@@ -19,10 +19,10 @@ export function About() {
 
           {/* Right Column */}
           <div className="flex flex-col justify-center">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-white/90 leading-relaxed mb-8">
               We are a small team of strategists, designers, and developers passionate about creating impactful digital experiences. We believe in quality over quantity, deep collaboration, and work that speaks louder than words.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-white/90 leading-relaxed">
               Based locally, working globally. We partner with ambitious businesses ready to stand out in their market.
             </p>
           </div>
@@ -35,7 +35,7 @@ export function About() {
               <div className="text-5xl md:text-6xl font-bold text-accent mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm uppercase tracking-widest text-muted-foreground">
+              <div className="text-sm uppercase tracking-widest text-white/90">
                 {stat.label}
               </div>
             </div>

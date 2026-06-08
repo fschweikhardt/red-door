@@ -1,23 +1,25 @@
-import { Navigation } from "@/components/navigation"
-import { Hero } from "@/components/hero"
-import { Work } from "@/components/work"
-import { Services } from "@/components/services"
-import { About } from "@/components/about"
-import { Contact } from "@/components/contact"
-import { Footer } from "@/components/footer"
+import { HomePage } from "@/pages/home-page"
+import { TeamPage } from "@/pages/team-page"
+import { ShowcasePage } from "@/pages/showcase-page"
+
+function isTeamPath(pathname: string) {
+  return pathname === "/team" || pathname === "/team/"
+}
+
+function isShowcasePath(pathname: string) {
+  return pathname === "/showcase" || pathname === "/showcase/"
+}
 
 export default function App() {
-  return (
-    <main className="min-h-screen relative noise-texture">
-      <div className="relative z-10">
-        <Navigation />
-        <Hero />
-        <Work />
-        <Services />
-        <About />
-        <Contact />
-        <Footer />
-      </div>
-    </main>
-  )
+  const { pathname } = window.location
+
+  if (isTeamPath(pathname)) {
+    return <TeamPage />
+  }
+
+  if (isShowcasePath(pathname)) {
+    return <ShowcasePage />
+  }
+
+  return <HomePage />
 }

@@ -36,16 +36,16 @@ export function Work() {
               className="group border-t border-border py-8 md:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4 cursor-pointer hover:pl-4 transition-all duration-300"
             >
               <div className="flex items-baseline gap-4">
-                <span className="text-sm text-muted-foreground">{String(index + 1).padStart(2, '0')}</span>
+                <span className="text-sm text-white/90">{String(index + 1).padStart(2, '0')}</span>
                 <h3 className="text-2xl md:text-4xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h3>
               </div>
               <div className="flex items-center gap-6 md:gap-12">
-                <span className="text-sm uppercase tracking-widest text-muted-foreground">
+                <span className="text-sm uppercase tracking-widest text-white/90">
                   {project.category}
                 </span>
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-white/90">
                   {project.year}
                 </span>
               </div>

@@ -15,13 +15,13 @@ export function Contact() {
             <div className="mt-12 space-y-6">
               <a 
                 href="mailto:hello@craftstudio.com"
-                className="flex items-center gap-4 text-muted-foreground hover:text-accent transition-colors duration-300 group"
+                className="flex items-center gap-4 text-white/90 hover:text-accent transition-colors duration-300 group"
               >
                 <Mail className="w-5 h-5" />
                 <span className="text-lg">hello@craftstudio.com</span>
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
-              <div className="flex items-center gap-4 text-muted-foreground">
+              <div className="flex items-center gap-4 text-white/90">
                 <MapPin className="w-5 h-5" />
                 <span className="text-lg">123 Main Street, Your City</span>
               </div>
@@ -32,7 +32,7 @@ export function Contact() {
           <div>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm uppercase tracking-widest text-muted-foreground mb-2">
+                <label htmlFor="name" className="block text-sm uppercase tracking-widest text-white/90 mb-2">
                   Name
                 </label>
                 <input
@@ -45,7 +45,7 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm uppercase tracking-widest text-muted-foreground mb-2">
+                <label htmlFor="email" className="block text-sm uppercase tracking-widest text-white/90 mb-2">
                   Email
                 </label>
                 <input
@@ -58,7 +58,7 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm uppercase tracking-widest text-muted-foreground mb-2">
+                <label htmlFor="message" className="block text-sm uppercase tracking-widest text-white/90 mb-2">
                   Message
                 </label>
                 <textarea
