@@ -1,9 +1,9 @@
 import { HomePage } from "@/pages/home-page"
-import { TeamPage } from "@/pages/team-page"
+import { CoopPage } from "@/pages/coop-page"
 import { ShowcasePage } from "@/pages/showcase-page"
 
-function isTeamPath(pathname: string) {
-  return pathname === "/team" || pathname === "/team/"
+function isCoopPath(pathname: string) {
+  return pathname === "/coop" || pathname === "/coop/"
 }
 
 function isShowcasePath(pathname: string) {
@@ -13,8 +13,8 @@ function isShowcasePath(pathname: string) {
 export default function App() {
   const { pathname } = window.location
 
-  if (isTeamPath(pathname)) {
-    return <TeamPage />
+  if (isCoopPath(pathname)) {
+    return <CoopPage />
   }
 
   if (isShowcasePath(pathname)) {

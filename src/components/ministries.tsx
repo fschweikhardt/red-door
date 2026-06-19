@@ -3,7 +3,7 @@ const ministries = [
     title: "Community Focused",
     description:
       "Worship teams, creative collaborators, and artists shaping an atmosphere of beauty and reverence each week.",
-    href: "/team",
+    href: "/coop",
   },
   {
     title: "Children & Youth",

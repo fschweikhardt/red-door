@@ -3,31 +3,38 @@ import { Menu, X } from "lucide-react"
 import logo from "@/components/ui/RDLogo_DoorOnly.png"
 
 const navItems = [
-  { label: "News", href: "#basic-info" },
-  { label: "Co-op", href: "#about" },
-  { label: "Kids", href: "#services" },
+  { label: "News", href: "#news" },
+  { label: "Co-op", href: "/coop" },
+  { label: "Kids", href: "/kids" },
 ]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const scrollToSection = (href: string) => {
+  const handleNavClick = (href: string) => {
     setIsOpen(false)
-    const element = document.querySelector(href)
-    element?.scrollIntoView({ behavior: "smooth" })
+
+    if (href.startsWith("#")) {
+      const onHomePage =
+        window.location.pathname === "/" || window.location.pathname === ""
+
+      if (!onHomePage) {
+        window.location.href = `/${href}`
+        return
+      }
+
+      const element = document.querySelector(href)
+      element?.scrollIntoView({ behavior: "smooth" })
+      return
+    }
+
+    window.location.href = href
   }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="flex items-center justify-between px-4 py-4 md:px-8">
-        <a 
-          href="#" 
-          className="block"
-          onClick={(e) => {
-            e.preventDefault()
-            window.scrollTo({ top: 0, behavior: "smooth" })
-          }}
-        >
+        <a href="/" className="block">
           <img
             src={logo}
             alt="Red Door Church"
@@ -40,7 +47,7 @@ export function Navigation() {
           {navItems.map((item) => (
             <li key={item.href}>
               <button
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item.href)}
                 className="text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
               >
                 {item.label}
@@ -66,7 +73,7 @@ export function Navigation() {
             {navItems.map((item) => (
               <li key={item.href}>
                 <button
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item.href)}
                   className="text-2xl uppercase tracking-widest text-foreground hover:text-accent transition-colors duration-300"
                 >
                   {item.label}

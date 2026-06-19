@@ -1,4 +1,4 @@
-import { ArrowUpRight, BookOpen, Download, ExternalLink, FileText } from "lucide-react"
+import { ArrowUpRight, BookOpen, Download, ExternalLink } from "lucide-react"
 
 const downloads = [
   {
@@ -15,25 +15,6 @@ const downloads = [
     title: "Pre-Launch Checklist",
     description: "Final checks for websites and campaigns before anything goes live.",
     href: "/downloads/pre-launch-checklist.pdf",
-  },
-]
-
-const onSitePages = [
-  {
-    title: "Bloomington Local Resources",
-    description:
-      "Our curated guide to places around town — for newcomers, creative professionals, and anyone getting to know the city.",
-    href: "/guides/local-resources/",
-  },
-  {
-    title: "How We Work With Clients",
-    description: "A deeper look at our process, timelines, and what to expect from a partnership.",
-    href: "/guides/client-process",
-  },
-  {
-    title: "Brand Fundamentals",
-    description: "What makes a brand system work — and how we approach identity projects.",
-    href: "/guides/brand-fundamentals",
   },
 ]
 
@@ -197,18 +178,6 @@ export function Resources() {
             </div>
             <div className="lg:col-span-9">
               <ResourceList items={downloads} icon={Download} linkLabel="Download PDF" />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 py-12 lg:py-16">
-            <div className="lg:col-span-3">
-              <h3 className="text-xl font-bold text-foreground">On Our Site</h3>
-              <p className="mt-3 text-sm text-white/90 leading-relaxed">
-                Longer guides and reference pages that live outside this homepage.
-              </p>
-            </div>
-            <div className="lg:col-span-9">
-              <ResourceList items={onSitePages} icon={FileText} linkLabel="Read more" />
             </div>
           </div>
 
