@@ -9,8 +9,8 @@ export function CoopPage() {
     <main className="min-h-screen relative noise-texture">
       <div className="relative z-10">
         <Navigation />
-        <Team showBackLink />
-        <CompanyBackground />
+        <CompanyBackground showBackLink/>
+        <Team />
         <CompanyEthos />
         <Footer />
       </div>

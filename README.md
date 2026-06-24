@@ -15,7 +15,7 @@ docker compose -f docker-compose.dev.yml up --build
 
 Copy container built node modles to local:
 ```bash
-docker cp <container id>:/app/node_modeules .
+docker cp <container id>:/app/node_modules .
 ```
 
 

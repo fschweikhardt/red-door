@@ -25,10 +25,22 @@ const chapters = [
   },
 ]
 
-export function CompanyBackground() {
+type CompanyBackgroundProps = {
+  showBackLink?: boolean
+}
+
+export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
   return (
-    <section id="background" className="py-24 px-4 md:px-8 bg-card border-t border-border">
+    <section id="background" className="py-24 px-4 md:px-8 md:pt-48 bg-card border-t border-border">
       <div className="max-w-7xl mx-auto">
+        {showBackLink && (
+          <a
+            href="/"
+            className="mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
+          >
+            ← Back to home
+          </a>
+        )}
         <div className="max-w-3xl mb-16">
           <span className="text-sm uppercase tracking-widest text-accent">Our Background</span>
           <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
