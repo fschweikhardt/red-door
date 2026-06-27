@@ -28,9 +28,9 @@ export function Hero() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Oversized Typography */}
         <h1 className="font-sans text-[clamp(1.5rem,15vw,5rem)] leading-[.85] tracking-tighter">
-          <HeroTitleLine offset="0.03em">RED</HeroTitleLine>
-          <HeroTitleLine offset="0.05em">DOOR</HeroTitleLine>
-          <HeroTitleLine offset="0.07em">CHURCH</HeroTitleLine>
+          <HeroTitleLine offset="0.06em">RED</HeroTitleLine>
+          <HeroTitleLine offset="0.07em">DOOR</HeroTitleLine>
+          <HeroTitleLine offset="0.09em">CHURCH</HeroTitleLine>
         </h1>
 
         {/* Tagline */}

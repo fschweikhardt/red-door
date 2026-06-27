@@ -48,7 +48,7 @@ export function Navigation() {
             <li key={item.href}>
               <button
                 onClick={() => handleNavClick(item.href)}
-                className="text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
+                className="text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300 md:cursor-pointer"
               >
                 {item.label}
               </button>

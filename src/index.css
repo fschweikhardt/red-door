@@ -111,7 +111,7 @@
 .hero-title-line {
   position: relative;
   display: block;
-  --hero-stroke: 0.02em;
+  --hero-stroke: 0.03em;
 }
 
 .hero-title-outline,
@@ -127,7 +127,7 @@
   color: transparent;
   -webkit-text-stroke: var(--hero-stroke) var(--accent);
   transform: translate(var(--hero-offset-x, 0.04em), var(--hero-offset-y, 0.04em));
-  opacity: 0.70;
+  opacity: 0.90;
   pointer-events: none;
 }
 

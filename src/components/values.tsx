@@ -1,3 +1,7 @@
+type ValuesProps = {
+  showBackLink?: boolean
+}
+
 const values = [
   {
     word: "Grace",
@@ -17,11 +21,19 @@ const values = [
   },
 ]
 
-export function Values() {
+export function Values({ showBackLink }: ValuesProps) {
   return (
-    <section id="values" className="py-24 px-4 md:px-8 border-y border-border">
+    <section id="values" className="py-24 px-4 md:px-8 md:pt-48 bg-card border-t border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        {showBackLink && (
+            <a
+              href="/"
+              className="mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
+            >
+              ← Back to home
+            </a>
+        )}
+        <div className="max-w-3xl mb-16">
           <span className="text-sm uppercase tracking-widest text-accent">Our Values</span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             What Guides Us
