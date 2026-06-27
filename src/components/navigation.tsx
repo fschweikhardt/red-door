@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import logo from "@/components/ui/RDLogo_DoorOnly.png"
 
@@ -10,6 +10,13 @@ const navItems = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : ""
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isOpen])
 
   const handleNavClick = (href: string) => {
     setIsOpen(false)
@@ -42,11 +49,11 @@ export function Navigation() {
           />
         </a>
 
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <li key={item.href}>
               <button
+                type="button"
                 onClick={() => handleNavClick(item.href)}
                 className="text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300 md:cursor-pointer"
               >
@@ -56,27 +63,38 @@ export function Navigation() {
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-foreground"
+          type="button"
+          onClick={() => setIsOpen((open) => !open)}
+          className="md:hidden p-2 text-foreground hover:text-accent transition-colors duration-300"
           aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 
-      {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-[65px] bg-background z-40">
-          <ul className="flex flex-col items-center justify-center h-full gap-8">
-            {navItems.map((item) => (
-              <li key={item.href}>
+        <div className="md:hidden absolute inset-x-0 top-full bg-background border-t border-border shadow-lg">
+          <ul className="px-4 pt-2 pb-6">
+            {navItems.map((item, index) => (
+              <li
+                key={item.href}
+                className={
+                  index < navItems.length - 1 ? "border-b border-border" : ""
+                }
+              >
                 <button
+                  type="button"
                   onClick={() => handleNavClick(item.href)}
-                  className="text-2xl uppercase tracking-widest text-foreground hover:text-accent transition-colors duration-300"
+                  className="group flex w-full items-center justify-between py-6 text-left transition-colors duration-300"
                 >
-                  {item.label}
+                  <span className="font-sans text-3xl uppercase tracking-tighter text-white group-hover:text-accent">
+                    {item.label}
+                  </span>
+                  <span className="text-sm uppercase tracking-widest text-white/40 group-hover:text-accent transition-colors duration-300">
+                    →
+                  </span>
                 </button>
               </li>
             ))}

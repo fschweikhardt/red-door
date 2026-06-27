@@ -23,7 +23,7 @@ const values = [
 
 export function Values({ showBackLink }: ValuesProps) {
   return (
-    <section id="values" className="py-24 px-4 md:px-8 md:pt-48 bg-card border-t border-border">
+    <section id="values" className="py-24 px-4 pt-36 md:px-8 md:pt-48 bg-card border-t border-border">
       <div className="max-w-7xl mx-auto">
         {showBackLink && (
             <a

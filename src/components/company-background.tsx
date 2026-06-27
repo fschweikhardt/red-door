@@ -31,7 +31,7 @@ type CompanyBackgroundProps = {
 
 export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
   return (
-    <section id="background" className="py-24 px-4 md:px-8 md:pt-48 bg-card border-t border-border">
+    <section id="background" className="py-24 px-4 pt-36 md:px-8 md:pt-48 bg-card border-t border-border">
       <div className="max-w-7xl mx-auto">
         {showBackLink && (
           <a
