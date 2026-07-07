@@ -8,14 +8,12 @@ import {
 
 const reviews = [
   {
-    text: "From the first Sunday we visited, people remembered our names. It genuinely feels like a community, not a crowd.",
-    name: "Sarah Lin",
-    role: "Member since 2022",
+    text: "Red Door has been such a safe haven for me as I’ve reconstructed a sense of faith over the past year and a half. I’ve truly never been to a church where I feel so free to ask questions and be accepted as I am. I would wholeheartedly recommend Red Door to anyone looking for a community of curious and down-to-earth people who value the teachings of Jesus and a good potluck!",
+    name: "Laney",
   },
   {
-    text: "The worship is thoughtful, the teaching is honest, and there is room to ask hard questions without being judged.",
-    name: "Marcus Webb",
-    role: "Bloomington local",
+    text: "A real church, but a church for people who don't really like church.",
+    name: "Frank",
   },
   {
     text: "Our kids love coming on Sundays. The youth ministry is warm, creative, and rooted in faith that meets them where they are.",

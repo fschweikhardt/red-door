@@ -1,14 +1,14 @@
 const ministries = [
   {
-    title: "Community Focused",
+    title: "Who We Are",
     description:
-      "Worship teams, creative collaborators, and artists shaping an atmosphere of beauty and reverence each week.",
+      "Curious to learn more about Red Door's story?",
     href: "/coop",
   },
   {
-    title: "Children & Youth",
+    title: "Red Door Kids",
     description:
-      "Age-appropriate teaching and mentorship that helps the next generation grow in faith with joy and confidence.",
+      "A place where kids learn they are the belowed children of God.",
     href: "/kids",
   },
 ]

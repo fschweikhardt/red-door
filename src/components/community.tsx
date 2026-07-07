@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react"
-import { FacebookPageEmbed } from "@/components/facebook-page-embed"
-import { FACEBOOK_PAGE_URL } from "@/lib/facebook"
+import { ThreadsEmbed } from "@/components/threads-embed"
+import { THREADS_PROFILE_URL } from "@/lib/threads"
 
 export function Community() {
   return (
@@ -10,10 +10,10 @@ export function Community() {
           <div>
             <span className="text-sm uppercase tracking-widest text-accent">Stay Connected</span>
             <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
-              Follow along on Facebook
+              Follow along on Threads
             </h2>
             <p className="mt-6 text-lg text-white/90 leading-relaxed">
-              Catch up with Red Door Church on our public Facebook page — service times,
+              Catch up with Red Door Church on our public Threads page — service times,
               events, photos, and announcements from our community in Bloomington.
             </p>
 
@@ -28,26 +28,26 @@ export function Community() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-2 w-1 h-1 shrink-0 rounded-full bg-accent" />
-                A public page anyone can follow — no group approval needed
+                A public page anyone can follow
               </li>
             </ul>
 
             <a
-              href={FACEBOOK_PAGE_URL}
+              href={THREADS_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-widest hover:bg-accent/90 transition-colors duration-300"
             >
-              Visit Facebook Page
+              Visit Threads Page
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
 
           <div className="border border-border bg-background/40 overflow-hidden min-h-[600px]">
-            <FacebookPageEmbed
-              tabs="timeline"
+            <ThreadsEmbed
+              href={THREADS_PROFILE_URL}
               height={600}
-              title="Red Door Church | Bloomington IN — Facebook Page"
+              title="Red Door Church | Bloomington IN — Threads Page"
             />
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { ArrowUpRight, Calendar, Clock, MapPin } from "lucide-react"
-import { FACEBOOK_PAGE_URL } from "@/lib/facebook"
+import { THREADS_PROFILE_URL } from "@/lib/threads"
 
 const ADDRESS = {
   name: "Red Door Church",
@@ -79,12 +79,12 @@ export function BasicInfo() {
           Schedules can change for holidays and special events. For the most up-to-date news,
           visit our{" "}
           <a
-            href={FACEBOOK_PAGE_URL}
+            href={THREADS_PROFILE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground hover:text-accent transition-colors duration-300 underline underline-offset-4"
           >
-            Facebook page
+            Threads page
           </a>{" "}
           or see the{" "}
           <a
@@ -93,7 +93,7 @@ export function BasicInfo() {
           >
             news section
           </a>{" "}
-          above.
+          below.
         </p>
       </div>
     </section>

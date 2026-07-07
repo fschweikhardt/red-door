@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react"
-import { FacebookPageEmbed } from "@/components/facebook-page-embed"
-import { FACEBOOK_PAGE_URL } from "@/lib/facebook"
+import { ThreadsEmbed } from "@/components/threads-embed"
+import { THREADS_PROFILE_URL } from "@/lib/threads"
 
 export function News() {
   return (
@@ -12,27 +12,27 @@ export function News() {
             Latest updates
           </h2>
           <p className="mt-6 text-lg text-white/90 leading-relaxed max-w-xl mx-auto">
-            Announcements, service changes, and upcoming events — pulled live from our
-            Facebook page.
+            Announcements, service changes, and upcoming events — follow us on our
+            Threads page.
           </p>
         </div>
 
         <div className="w-full max-w-[500px] mx-auto border border-border bg-card/40 overflow-hidden shadow-sm">
-          <FacebookPageEmbed
-            tabs="timeline,events"
+          <ThreadsEmbed
+            href={THREADS_PROFILE_URL}
             height={800}
-            title="Red Door Church — News and Events on Facebook"
+            title="Red Door Church — News and Events on Threads"
           />
         </div>
 
         <div className="mt-10 text-center">
           <a
-            href={FACEBOOK_PAGE_URL}
+            href={THREADS_PROFILE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
           >
-            See all posts on Facebook
+            See all posts on Threads
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
