@@ -1,109 +1,112 @@
-Production (build + nginx): 
-```bash
-docker compose up --build
-```
-→  http://localhost:8080
+# Red Door Church
 
+## Local development
 
-
-Dev (hot reload):
+**Dev (hot reload):**
 ```bash
 docker compose -f docker-compose.dev.yml up --build
 ```
-→  http://localhost:5173
+→ http://localhost:5173
 
+**Production image (local):**
+```bash
+docker compose up --build
+```
+→ http://localhost:8080
 
-Copy container built node modles to local:
+Copy container-built `node_modules` to local:
 ```bash
 docker cp <container id>:/app/node_modules .
 ```
 
+---
 
-# Notes from the meeting with Giff and Lucas
-https://docs.google.com/document/d/1z7qVtw9CKrNvZwcwXFvDP7_XbGan4iehZeUuvykKa0Y/edit?tab=t.0
+## Threads feed setup
 
-Purpose & Audience
-1.Who is the website for? (i.e. for church members, for people looking for a church, for people who are curious about visiting) 
+The News section loads posts live from `@reddoorbtown` via the Threads API. A small Node server fetches posts at runtime and refreshes the access token automatically — no manual post URLs and no redeploy needed when you publish on Threads.
 
+### 1. Create a Meta app
 
-2.For each entry, how does the website service that audience? 
-* Location and Time Info
-* This is who we are statement(s)
-   * Jesus welcomes all at his table and so do we
-* Basic Kids information (age breakdowns, frequency)
-* Real Time Social Feed - communication
+1. Go to [developers.facebook.com](https://developers.facebook.com/) and create an app.
+2. Add the **Threads API** use case.
+3. Note your **Threads App ID** and **Threads App Secret** (App settings → Basic).
+4. Under OAuth / redirect URIs, add:
+   - `http://localhost:5173/api/threads/oauth/callback` (local dev)
+   - `https://red-door.fly.dev/api/threads/oauth/callback` (production — use your real Fly URL if different)
 
+### 2. Local dev
 
+```bash
+cp .env.example .env
+```
 
+Fill in `.env`:
+```
+THREADS_APP_ID=your_app_id
+THREADS_APP_SECRET=your_app_secret
+THREADS_REDIRECT_URI=http://localhost:5173/api/threads/oauth/callback
+```
 
-Features
-1. What are "must-have" features? 
-* NONE
-2.What are other desired features (i.e. a feed from our FB page, contact form, or map)? 
-* “quotes/reviews” i.e. what I love about Red Door or what does Red Door mean to me
-* Feed from a social media account (for real time communication only)
-* 3. Communication features…one of you told Frank you were interested in a text service that could go out to members, that could update news on the website, as well as integrating the RD Facebook news feed into the website. 
-1. Anything you want to express more fully here about communication in regards to how the website can aid in that/be integrated?  
-2.  In the spirit of communication, anything we should talk about in regards to Mailchimp? How/when communication is sent out about Red Door? Do you want assistance with communication? 
+Start the dev container:
+```bash
+docker compose -f docker-compose.dev.yml up --build
+```
 
+Connect Threads once (log in as `@reddoorbtown` when prompted):
+```
+http://localhost:5173/api/threads/oauth/start
+```
 
+You should be redirected back to the site with `?threads=connected`. Scroll to **News & Events** to confirm posts are loading.
 
+The token is saved in `./data/threads-token.json` (gitignored) and refreshed automatically by the server.
 
-Design
+### 3. Fly.io production
 
+**Create a volume** (once — stores the token across deploys):
+```bash
+fly volumes create threads_data --region ord --size 1
+```
 
-1. Do you have existing brand ideas, such as a logo, specific colors, or fonts?
-We can give you logos
+**Set secrets:**
+```bash
+fly secrets set \
+  THREADS_APP_ID=your_app_id \
+  THREADS_APP_SECRET=your_app_secret \
+  THREADS_REDIRECT_URI=https://red-door.fly.dev/api/threads/oauth/callback
+```
 
+**Deploy:**
+```bash
+fly deploy
+```
 
-Pages: Kids, Our Story, Thoughts and Prayers (Creed), E-store
-* Kids: Basic Descriptions, Age breakdowns, Pictures
-2. Do you have existing content (copy, images, videos) you want to use?
-Nope
+**Connect Threads once** (log in as `@reddoorbtown`):
+```
+https://red-door.fly.dev/api/threads/oauth/start
+```
 
+After approving access, new Threads posts appear in the News section within a few minutes (feed is cached for 5 minutes).
 
-3. Is there an example of websites you like?
+### How it works
 
+| Piece | What it does |
+|---|---|
+| `server.mjs` | Serves the site and `/api/threads-feed` |
+| `/api/threads/oauth/start` | One-time OAuth connect for `@reddoorbtown` |
+| `/data/threads-token.json` | Stores the long-lived token (Fly volume or local `./data`) |
+| Auto-refresh | Server refreshes the token weekly — no manual token maintenance |
 
-no
+### Troubleshooting
 
+- **News shows “Follow on Threads” instead of posts** — OAuth connect hasn’t been completed yet. Visit `/api/threads/oauth/start`.
+- **OAuth error after redirect** — `THREADS_REDIRECT_URI` must exactly match a URI in your Meta app settings (including trailing slashes).
+- **Posts stopped appearing** — Token may have expired after 60+ days without a refresh. Visit `/api/threads/oauth/start` again to reconnect.
+- **Local API not responding** — The dev setup runs the API server on port 3000 inside the container; Vite proxies `/api` requests to it.
 
-Techy Details 
-1. Do you already own a domain name(s) and web hosting?
-Yes - contact jordan about transferring 
+### Optional env vars
 
+See `.env.example` for tuning:
 
-2. Do we want to use a new domain or buy any others that forward to our main domain?
-no
-
-
-“Marketing” & Content
-1. What is the mission statement of Red Door? 
-Jesus welcomes all at his table and so do we
-
-
-2. What do you want to say about who we are and we are not? 
-We are not what we think
-
-
-3. Do you want to say anything about yourselves? Our history? What a typical Sunday feels             like,etc?  
-Nope
-
-
-4. Is there a text/quote/image that captures the heart of who RD is? 
-Jesus welcomes all at his table and so do we
-
-
-5. Any key words about the DNA of Red Door you want to emphasize? 
-
-
-2. What kind of audience do you want to attract? What kind of people do you want to attract to the Red Door? 
-Na
-
-
-Other
-1. Aside from Frank and Sarah (and you two), do you want to add anyone to the RD website team as we create/build/launch the site…an extra set of eyes/feedback/etc?
-Not a chance.
-
-
-2. Frank will build the website for free. I believe he called himself a tech wizard or magician or maybe a ninja…you’re in good hands….and this can atone for our years of under-tithing ; )
+- `THREADS_POST_LIMIT` — number of posts to show (default `5`, max `25`)
+- `THREADS_CACHE_TTL_MS` — how long to cache the feed (default `300000` = 5 minutes)

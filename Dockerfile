@@ -8,11 +8,20 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine
+FROM node:22-alpine
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist /usr/share/nginx/html
+WORKDIR /app
+
+COPY server.mjs ./
+COPY lib ./lib
+COPY --from=build /app/dist ./dist
+
+ENV NODE_ENV=production
+ENV PORT=80
+ENV THREADS_DATA_DIR=/data
+
+RUN mkdir -p /data
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "server.mjs"]

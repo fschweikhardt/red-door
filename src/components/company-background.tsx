@@ -1,26 +1,30 @@
 const chapters = [
   {
-    period: "The beginning",
-    title: "A door opened in Bloomington",
+    // period: "1",
+    title: "Our Name",
     body: [
-      "Red Door Church started with a simple conviction: everyone deserves a place at the table. A small group of neighbors began meeting in living rooms, sharing meals, studying scripture, and asking honest questions together.",
-      "What we lacked in size, we made up for in intention — worship that was warm, teaching that was clear, and a community that showed up for one another outside of Sunday mornings.",
+      "Red Door Church is a place of refuge and pathway for all seekers, believers, and wanderers. The name ‘Red Door’ is inspired by the historical use of red doors to signify a church that was a place of sanctuary and safety, as well as serving as a visual reminder of the work of Christ, sacrificed and risen.",
     ],
   },
   {
-    period: "Growing together",
-    title: "From gathering to church",
+    // period: "2",
+    title: "Our Hope",
     body: [
-      "As more people found their way through the door, we formalized as a church while keeping the same spirit — informal where it helps, serious where it matters, and always oriented toward welcome.",
-      "We moved into our current rhythm of Sunday worship, monthly potlucks, and midweek connection. Each season brought new faces, new gifts, and a deeper sense that we were building something rooted in this city.",
+      "Our hope is that those who enter our doors would feel that. Come as you are. Bring your story, joys, sorrows, questions, your spiritual journey, your full self. You are safe. You are loved. You are welcome.",
     ],
   },
   {
-    period: "Today",
-    title: "Still opening the door",
+    // period: "3",
+    title: "Our Vibe",
     body: [
-      "Today Red Door Church is a community of families, students, artists, retirees, and seekers — all learning to follow Jesus together in Bloomington. We are not perfect, but we are present for each other.",
-      "Our story is still being written. If you are curious, weary, or looking for a faith community that makes room for questions, we would love to meet you.",
+      "We are a small, but heartfelt community, with a unique co-op vibe. Our bi-vocationation pastors welcome the ideas, voices, and hopes of our community, and we all take part in making Red Door Church exist and flourish.",
+    ],
+  },
+  {
+    // period: "4",
+    title: "Our Sundays",
+    body: [
+      "On Sunday mornings we sit at round tables; questions, discussions, and prayers are woven into the rhythm of teaching, liturgies, and communion. By turning our chairs towards one another (not towards a pulpit), we truly see each other, learn from each other, and get to know one another’s stories. Once a month, our Sunday service ends with a potluck.",
     ],
   },
 ]
@@ -61,8 +65,7 @@ export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
               }`}
             >
               <div className="lg:col-span-4">
-                <p className="text-sm uppercase tracking-widest text-accent">{chapter.period}</p>
-                <h3 className="mt-3 text-2xl md:text-3xl font-bold text-card-foreground leading-snug">
+                <h3 className="text-2xl md:text-3xl font-bold text-card-foreground leading-snug">
                   {chapter.title}
                 </h3>
               </div>

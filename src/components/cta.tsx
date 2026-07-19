@@ -3,24 +3,24 @@ export function Cta() {
     <section id="cta" className="py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto border border-border bg-card/50 p-10 md:p-16 text-center">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-tight max-w-2xl mx-auto">
-          Ready to sharpen how your business looks and feels?
+          Come join us on a Sunday morning!
         </h2>
-        <p className="mt-6 text-white/90 max-w-lg mx-auto leading-relaxed">
+        {/* <p className="mt-6 text-white/90 max-w-lg mx-auto leading-relaxed">
           Tell us about your project. We will reply within one business day with next steps.
-        </p>
+        </p> */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#contact"
+            href="#basic-info"
             className="w-full sm:w-auto px-12 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-widest hover:bg-accent/90 transition-colors duration-300"
           >
-            Start a Project
+            WHEN & WHERE
           </a>
-          <a
+          {/* <a
             href="#work"
             className="w-full sm:w-auto px-12 py-4 border border-foreground text-foreground font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors duration-300"
           >
             View Our Work
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

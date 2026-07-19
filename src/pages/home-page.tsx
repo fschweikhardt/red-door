@@ -26,11 +26,11 @@ export function HomePage() {
         <Hero />
         <Welcome />
         <BasicInfo />
-        <News />
         <Studio />
         <Ministries />
         <ClientReviews />
         {/* <Resources /> */}
+        <News />
         <Cta />
         <Footer />
       </div>

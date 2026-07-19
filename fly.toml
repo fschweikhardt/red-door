@@ -6,7 +6,10 @@
 app = 'red-door'
 primary_region = 'ord'
 
-[build]
+[env]
+  THREADS_DATA_DIR = "/data"
+  THREADS_POST_LIMIT = "5"
+  THREADS_CACHE_TTL_MS = "300000"
 
 [http_service]
   internal_port = 80

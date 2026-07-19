@@ -1,19 +1,19 @@
 const highlights = [
   {
-    title: "Local roots, wide reach",
-    body: "We are a neighborhood studio with clients across the region — from storefronts on Main Street to brands shipping nationwide.",
+    title: "We Learn From Each Other",
+    body: "We have a unique co-op vibe. All voices matter and are heard. Even our posture at Sunday gatherings of sitting at round tables, with the communion table at the center, lends to our belief that we are in this together, and all our stories and voices are essential.",
   },
   {
-    title: "Small team, senior attention",
-    body: "No account managers in the middle. You work directly with the people designing and building your project.",
+    title: "We Are Unafraid of the Questions",
+    body: "We ask the hard questions of faith and life. Some questions have answers. Some don't. Some answers are lived. We embrace the bravery, hope, and curiosity of asking and living the questions.",
   },
   {
-    title: "Systems over one-offs",
-    body: "Logos, websites, signage, and social templates that feel cohesive — so your brand looks intentional everywhere.",
+    title: "We are Unapologetically Simple",
+    body: "Our Sunday mornings are simple. We gather to encourage, to listen, to share, to take communion. Our church rhythm is simple. We care deeply for one another. We find our hope in Jesus.",
   },
   {
-    title: "Honest timelines",
-    body: "Clear milestones, regular check-ins, and realistic deadlines. We would rather under-promise and over-deliver.",
+    title: "We look to the life and teaching of Jesus",
+    body: "Amid it all, we find that it is still Jesus to whom we look to and find our hope. It is His life and teachings we abide in, as we live in the reality of God's goodness and love.",
   },
 ]
 

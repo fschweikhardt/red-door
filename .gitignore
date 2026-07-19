@@ -1,5 +1,9 @@
 # Environment variables
+.env
 .env*.local
+
+# Threads token storage
+data/
 
 # Common ignores
 node_modules

@@ -8,8 +8,17 @@ services:
     volumes:
       - .:/app
       - dev_node_modules:/app/node_modules
+      - threads_data:/app/data
     environment:
       CHOKIDAR_USEPOLLING: "true"
+      PORT: "3000"
+      THREADS_DATA_DIR: "/app/data"
+      THREADS_APP_ID: ${THREADS_APP_ID:-}
+      THREADS_APP_SECRET: ${THREADS_APP_SECRET:-}
+      THREADS_REDIRECT_URI: ${THREADS_REDIRECT_URI:-http://localhost:5173/api/threads/oauth/callback}
+      THREADS_ACCESS_TOKEN: ${THREADS_ACCESS_TOKEN:-}
+      THREADS_POST_LIMIT: ${THREADS_POST_LIMIT:-5}
 
 volumes:
   dev_node_modules:
+  threads_data:

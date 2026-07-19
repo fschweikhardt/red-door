@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react"
-import { ThreadsEmbed } from "@/components/threads-embed"
+import { ThreadsFeed } from "@/components/threads-feed"
 import { THREADS_PROFILE_URL } from "@/lib/threads"
 
 export function News() {
@@ -18,9 +18,9 @@ export function News() {
         </div>
 
         <div className="w-full max-w-[500px] mx-auto border border-border bg-card/40 overflow-hidden shadow-sm">
-          <ThreadsEmbed
-            href={THREADS_PROFILE_URL}
-            height={800}
+          <ThreadsFeed
+            maxWidth={500}
+            fallbackHeight={800}
             title="Red Door Church — News and Events on Threads"
           />
         </div>

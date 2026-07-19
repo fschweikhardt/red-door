@@ -2,7 +2,7 @@ const ministries = [
   {
     title: "Who We Are",
     description:
-      "Curious to learn more about Red Door's story?",
+      "Learn more about heartbeat and history of Red Door.",
     href: "/coop",
   },
   {
@@ -17,12 +17,6 @@ export function Ministries() {
   return (
     <section id="ministries" className="py-24 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20 max-w-2xl">
-          <span className="text-sm uppercase tracking-widest text-accent">Ministries</span>
-          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-            Many Gifts, One Body
-          </h2>
-        </div>
 
         <div className="space-y-0">
           {ministries.map((ministry, index) => {

@@ -8,23 +8,22 @@ import {
 
 const reviews = [
   {
-    text: "Red Door has been such a safe haven for me as I’ve reconstructed a sense of faith over the past year and a half. I’ve truly never been to a church where I feel so free to ask questions and be accepted as I am. I would wholeheartedly recommend Red Door to anyone looking for a community of curious and down-to-earth people who value the teachings of Jesus and a good potluck!",
+    text: "We came carrying religious trauma, wary of church altogether. Red Door surprised us—a place where every question is welcome, and people genuinely care for one another. It's not perfect, it's authentic. We're so grateful we found this community.",
+    name: "Christie",
+  },
+  {
+    text: "Red Door has been such a safe haven for me as I've reconstructed a sense of faith over the past year and a half. I've truly never been to a church where I feel so free to ask questions and be accepted as I am. I would wholeheartedly recommend Red Door to anyone looking for a community of curious and down-to-earth people who value the teachings of Jesus and a good potluck!",
     name: "Laney",
   },
   {
-    text: "A real church, but a church for people who don't really like church.",
+    text: "We love Red Door because of its desire to embody the welcoming love of Jesus Christ. Come as you are, with all of your worries, doubts, and frustrations, and know that you are welcome. Come with all of your joy, praising God for the wonders He has shown you and rejoicing in His steadfast love. Come because you are a beloved child of God. ",
+    name: "Ryan",
+  },
+  {
+    text: "A real church, but maybe a church for people who don't really like church.",
     name: "Frank",
   },
-  {
-    text: "Our kids love coming on Sundays. The youth ministry is warm, creative, and rooted in faith that meets them where they are.",
-    name: "Priya Shah",
-    role: "Parent & volunteer",
-  },
-  {
-    text: "Red Door has become our home church. The potlucks, the prayer, the openness — it is the real deal.",
-    name: "Tom Bradley",
-    role: "Member since 2024",
-  },
+
 ]
 
 export function ClientReviews() {
@@ -33,14 +32,14 @@ export function ClientReviews() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <span className="text-sm uppercase tracking-widest text-accent">Client Reviews</span>
+            {/* <span className="text-sm uppercase tracking-widest text-accent">Client Reviews</span> */}
             <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-card-foreground">
-              What people are saying
+              The Impact of Red Door
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-sm leading-relaxed text-sm">
+          {/* <p className="text-muted-foreground max-w-sm leading-relaxed text-sm">
             Voices from our community — shared with permission.
-          </p>
+          </p> */}
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -67,7 +66,6 @@ export function ClientReviews() {
                       <div className="w-8 h-px bg-accent" />
                       <div>
                         <div className="text-sm font-bold text-foreground">{review.name}</div>
-                        <div className="text-sm text-muted-foreground">{review.role}</div>
                       </div>
                     </figcaption>
                   </figure>

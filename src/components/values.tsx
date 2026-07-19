@@ -4,20 +4,20 @@ type ValuesProps = {
 
 const values = [
   {
-    word: "Grace",
-    meaning: "We lead with mercy before judgment, making room for every story.",
+    word: "Babies & Toddlers",
+    meaning: "Our littles play, and have a craft, snack, and Bible story.",
   },
   {
-    word: "Truth",
-    meaning: "We pursue scripture with humility, courage, and open conversation.",
+    word: "Young  Elementary School Kids",
+    meaning: "Our robust class of elementary school age kids  stay downstairs for worship, and then head upstairs to their classrooms for fun, play, Bible stories, crafts, snacks.",
   },
   {
-    word: "Belonging",
-    meaning: "No one is an outsider here. The table is wide and the door is open.",
+    word: "Youth/Jr. High",
+    meaning: "Our small, but mighty group of older kids also stay for worship, and then gather to participate in a Bible reading and topic-based discussions.",
   },
   {
-    word: "Service",
-    meaning: "Faith moves outward — into our neighborhoods, schools, and streets.",
+    word: "Family Sundays",
+    meaning: "The last Sunday of the month is a shortened service, in which all the kids stay with us for worship, the service, and a potluck.. Coloring & kid packs are available.",
   },
 ]
 
@@ -34,9 +34,9 @@ export function Values({ showBackLink }: ValuesProps) {
             </a>
         )}
         <div className="max-w-3xl mb-16">
-          <span className="text-sm uppercase tracking-widest text-accent">Our Values</span>
+          {/* <span className="text-sm uppercase tracking-widest text-accent">Our Values</span> */}
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-            What Guides Us
+            Kids Groups of All Ages
           </h2>
         </div>
 

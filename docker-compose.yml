@@ -4,3 +4,15 @@ services:
     ports:
       - "8080:80"
     restart: unless-stopped
+    volumes:
+      - threads_data:/data
+    environment:
+      THREADS_DATA_DIR: "/data"
+      THREADS_APP_ID: ${THREADS_APP_ID:-}
+      THREADS_APP_SECRET: ${THREADS_APP_SECRET:-}
+      THREADS_REDIRECT_URI: ${THREADS_REDIRECT_URI:-http://localhost:8080/api/threads/oauth/callback}
+      THREADS_ACCESS_TOKEN: ${THREADS_ACCESS_TOKEN:-}
+      THREADS_POST_LIMIT: ${THREADS_POST_LIMIT:-5}
+
+volumes:
+  threads_data:
