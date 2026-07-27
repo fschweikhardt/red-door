@@ -9,6 +9,7 @@ import {
   ensureValidToken,
   exchangeAuthorizationCode,
   getOAuthStartUrl,
+  getThreadsSetupStatus,
   isThreadsConfigured,
   readTokenStore,
 } from "./lib/threads-token.mjs"
@@ -175,6 +176,11 @@ async function handleRequest(req, res) {
 
   if (req.method === "GET" && url.pathname === "/api/health") {
     json(res, 200, { ok: true })
+    return
+  }
+
+  if (req.method === "GET" && url.pathname === "/api/threads/status") {
+    json(res, 200, getThreadsSetupStatus())
     return
   }
 

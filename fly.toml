@@ -10,6 +10,13 @@ primary_region = 'ord'
   THREADS_DATA_DIR = "/data"
   THREADS_POST_LIMIT = "5"
   THREADS_CACHE_TTL_MS = "300000"
+  THREADS_REDIRECT_URI = "https://red-door.fly.dev/api/threads/oauth/callback"
+
+# Persists the OAuth token across deploys/restarts. Create once:
+#   fly volumes create threads_data --region ord --size 1
+[[mounts]]
+  source = "threads_data"
+  destination = "/data"
 
 [http_service]
   internal_port = 80
