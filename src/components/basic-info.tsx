@@ -2,14 +2,12 @@ import { ArrowUpRight, Calendar, Clock, MapPin } from "lucide-react"
 import { THREADS_PROFILE_URL } from "@/lib/threads"
 
 const ADDRESS = {
-  name: "Red Door Church",
-  street: "123 Main Street",
-  city: "Bloomington, IN 47401",
+  name: "Boys & Girls Clubs of Bloomington - Ferguson Crestmont Club",
+  street: "1111 W. 12thStreet",
+  city: "Bloomington, IN 47404",
 }
 
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  `${ADDRESS.street}, ${ADDRESS.city}`
-)}`
+const MAPS_URL = "https://maps.app.goo.gl/x4TG6aGB5kXiK7ft6"
 
 export function BasicInfo() {
   return (
@@ -57,7 +55,7 @@ export function BasicInfo() {
                   10:30 AM – 12:00 PM
                 </p>
                 <p className="mt-2 text-white/90 leading-relaxed">
-                  Weekly gathering — all are welcome.
+                  Weekly gathering August through May
                 </p>
               </div>
 
@@ -66,9 +64,9 @@ export function BasicInfo() {
                   <Calendar className="w-4 h-4 text-accent" />
                   <p className="text-sm uppercase tracking-widest text-accent">Monthly</p>
                 </div>
-                <p className="text-xl font-bold text-foreground">Potluck on the last Sunday</p>
+                <p className="text-xl font-bold text-foreground">Potluck on the last Sunday of the month</p>
                 <p className="mt-2 text-white/90 leading-relaxed">
-                  Bring a dish to share — we eat together after service.
+                  Bring a dish to share, or not! We can always order pizza.
                 </p>
               </div>
             </div>
@@ -76,15 +74,14 @@ export function BasicInfo() {
         </div>
 
         <p className="mt-10 text-center text-white/90 leading-relaxed max-w-2xl mx-auto">
-          Schedules can change for holidays and special events. For the most up-to-date news,
-          visit our{" "}
+          For up-to-date info
           <a
             href={THREADS_PROFILE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground hover:text-accent transition-colors duration-300 underline underline-offset-4"
           >
-            Threads page
+          
           </a>{" "}
           or see the{" "}
           <a

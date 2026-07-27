@@ -5,11 +5,11 @@ type ValuesProps = {
 const values = [
   {
     word: "Babies & Toddlers",
-    meaning: "Our littles play, and have a craft, snack, and Bible story.",
+    meaning: "Our littles can go upstairs at the beginning of church. Their playtime is interspersed with crafts, songs, and stories.",
   },
   {
     word: "Young  Elementary School Kids",
-    meaning: "Our robust class of elementary school age kids  stay downstairs for worship, and then head upstairs to their classrooms for fun, play, Bible stories, crafts, snacks.",
+    meaning: "Our robust class of elementary school age kids stay downstairs for worship, and then head upstairs to their classrooms for fun, play, Bible stories, crafts, and snacks.",
   },
   {
     word: "Youth/Jr. High",
@@ -17,7 +17,7 @@ const values = [
   },
   {
     word: "Family Sundays",
-    meaning: "The last Sunday of the month is a shortened service, in which all the kids stay with us for worship, the service, and a potluck.. Coloring & kid packs are available.",
+    meaning: "The last Sunday of the month is a shortened service, in which all the kids stay with us for worship, the service, and a potluck. Coloring & kid packs are available.",
   },
 ]
 
@@ -33,12 +33,12 @@ export function Values({ showBackLink }: ValuesProps) {
               ← Back to home
             </a>
         )}
-        <div className="max-w-3xl mb-16">
-          {/* <span className="text-sm uppercase tracking-widest text-accent">Our Values</span> */}
+        {/* <div className="max-w-3xl mb-16">
+          <span className="text-sm uppercase tracking-widest text-accent">Our Values</span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             Kids Groups of All Ages
           </h2>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((value, index) => (

@@ -3,21 +3,21 @@ const chapters = [
     // period: "1",
     title: "Our Name",
     body: [
-      "Red Door Church is a place of refuge and pathway for all seekers, believers, and wanderers. The name ‘Red Door’ is inspired by the historical use of red doors to signify a church that was a place of sanctuary and safety, as well as serving as a visual reminder of the work of Christ, sacrificed and risen.",
+      "Red Door Church is a place of refuge and pathway for all seekers, believers, sometimes believers, and wanderers. The name ‘Red Door’ is inspired by the historical use of red doors to signify a church that was/is a place of sanctuary and safety, as well as serving as a visual reminder of the work of Christ, sacrificed and risen.",
     ],
   },
   {
     // period: "2",
     title: "Our Hope",
     body: [
-      "Our hope is that those who enter our doors would feel that. Come as you are. Bring your story, joys, sorrows, questions, your spiritual journey, your full self. You are safe. You are loved. You are welcome.",
+      "Our hope is that those who enter our doors would feel the invitation ... Come as you are. Bring your story, joys, sorrows, questions, your spiritual journey, your full self. You are safe. You are loved. You are welcome.",
     ],
   },
   {
     // period: "3",
     title: "Our Vibe",
     body: [
-      "We are a small, but heartfelt community, with a unique co-op vibe. Our bi-vocationation pastors welcome the ideas, voices, and hopes of our community, and we all take part in making Red Door Church exist and flourish.",
+      "We are a small, but heartfelt community, with a unique co-op vibe. Our bi-vocational pastors welcome the ideas, voices, and hopes of our community, and we all take part in making Red Door Church exist and flourish.",
     ],
   },
   {
@@ -46,14 +46,14 @@ export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
           </a>
         )}
         <div className="max-w-3xl mb-16">
-          <span className="text-sm uppercase tracking-widest text-accent">Our Background</span>
+          <span className="text-sm uppercase tracking-widest text-accent">what is red door</span>
           <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
-            Where we come from
+            Our Heartbeat
           </h2>
-          <p className="mt-6 text-lg text-white/90 leading-relaxed">
+          {/* <p className="mt-6 text-lg text-white/90 leading-relaxed">
             Red Door Church did not begin as a program or a building. It began as a commitment —
             to worship God, love our neighbors, and keep the door open for anyone who wants to belong.
-          </p>
+          </p> */}
         </div>
 
         <div className="space-y-0 border-t border-border">

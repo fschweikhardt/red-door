@@ -13,7 +13,7 @@ export function Welcome() {
         </div>
 
         <p className="mt-10 text-lg leading-relaxed max-w-2xl mx-auto">
-        Red Door Church is a refuge and pathway for the curious, questioning, earnest, cynical, faithful, tired, and _____ (fill in the blank). 
+        Red Door Church is a refuge and pathway for the curious, questioning, earnest, cynical, faithful,<br/>tired, and _____ (fill in the blank). 
         </p>
 
         <div className="mt-14 inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-sm uppercase tracking-widest text-white/90">

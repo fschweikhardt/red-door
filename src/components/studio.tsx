@@ -9,11 +9,11 @@ const highlights = [
   },
   {
     title: "We are Unapologetically Simple",
-    body: "Our Sunday mornings are simple. We gather to encourage, to listen, to share, to take communion. Our church rhythm is simple. We care deeply for one another. We find our hope in Jesus.",
+    body: "Our Sunday mornings are simple. We gather to encourage, to listen, to share, to take communion. Our church rhythm is simple. We care deeply for one another. We seek God's love and believe God is with us.",
   },
   {
-    title: "We look to the life and teaching of Jesus",
-    body: "Amid it all, we find that it is still Jesus to whom we look to and find our hope. It is His life and teachings we abide in, as we live in the reality of God's goodness and love.",
+    title: "We look to the life and teachings of Jesus",
+    body: "Amid it all, it is still Jesus in whom we find our hope. It is His life and teachings we abide in, as we live in the reality of God's goodness and love.",
   },
 ]
 
@@ -23,14 +23,14 @@ export function Studio() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
-            <span className="text-sm uppercase tracking-widest text-accent">The Studio</span>
+            <span className="text-sm uppercase tracking-widest text-accent">What does it look like...</span>
             <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
-              Design that feels personal, not generic.
+              to be a refuge and pathway?
             </h2>
-            <p className="mt-6 text-white/90 leading-relaxed">
+            {/* <p className="mt-6 text-white/90 leading-relaxed">
               We partner with local businesses who care about craft — cafés, boutiques, nonprofits,
               and founders building something worth noticing.
-            </p>
+            </p> */}
           </div>
 
           <div className="lg:col-span-7 space-y-0">

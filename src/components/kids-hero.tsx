@@ -20,7 +20,7 @@ export function KidsHero({ showBackLink }: KidsHeroProps) {
             Simple & Rooted in Love
           </h2>
           <p className="mt-6 text-lg text-white/90 leading-relaxed">
-            Red Door Kids is comprised of three classes: 0-5, Young Elementary, and Youth. Everything we do with and for our RD Kids is founded upon two essential truths: God is love & they are the beloved children of God.  
+            Red Door Kids is comprised of three classes: Babies & Toddlers, Young Elementary, and Youth. Everything we do with and for our RD Kids is founded upon two essential truths: God is love & they are the beloved children of God.  
           </p>
         </div>
       </div>

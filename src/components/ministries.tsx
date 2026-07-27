@@ -8,7 +8,7 @@ const ministries = [
   {
     title: "Red Door Kids",
     description:
-      "A place where kids learn they are the belowed children of God.",
+      "A place where kids learn they are the beloved children of God.",
     href: "/kids",
   },
 ]

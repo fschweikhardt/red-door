@@ -1,11 +1,11 @@
 const principles = [
   {
     title: "We All Belong",
-    lead: "First and foremost, Jesus accepts all at His table & so do we. As our weekly communion liturgy states “______, _______, ______, _______”  We believe we are beloved children of God and belong to God. The transformational work of Christ and the stunning love of God is the lens through which we read scripture, liturgies, and teach. ",
+    lead: "First and foremost, Jesus accepts all at His table & so do we. We believe ALL are beloved children of God and belong to God. The transformational work of Christ and the stunning love of God is the lens through which we read scripture, liturgies, and teach. ",
   },
   {
-    title: "We Believe _______",
-    lead: "While we adhere to the Nicene Creed, ancient and trusted, Red Door holds no official statement of beliefs, lists of do’s and don’t’s, or church hierarchy/patriarchy. We believe, because of the work and life of Christ, there is spaciousness, both/and’s, questions, hope, gray areas, grace, and love in the Kingdom of God.",
+    title: "We Believe",
+    lead: "While we adhere to the Apostles Creed, ancient and trusted, Red Door holds no official statement of beliefs, lists of do’s and don’t’s, or church hierarchy/patriarchy. We believe, because of the work and life of Christ, there is spaciousness, both/and’s, questions, hope, gray areas, grace, and love in the Kingdom of God.",
   },
   {
     title: "Giff say something",

@@ -3,10 +3,21 @@ type TeamProps = {
 }
 
 const members = [
-  { name: "Elena Ruiz", role: "Creative Director" },
-  { name: "James Okonkwo", role: "Lead Designer" },
-  { name: "Priya Shah", role: "Web Developer" },
-  { name: "Tom Bradley", role: "Brand Strategist" },
+  {
+    name: "The Reeds",
+    role: "Co-Pastors",
+    image: "/team/reeds.png",
+  },
+  {
+    name: "The Allens",
+    role: "Co-Pastors",
+    image: "/team/allens.png",
+  },
+  {
+    name: "The Kleins",
+    role: "Red Door Kids",
+    image: "/team/kleins.png",
+  },
 ]
 
 export function Team({ showBackLink }: TeamProps) {
@@ -23,25 +34,25 @@ export function Team({ showBackLink }: TeamProps) {
         )}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <span className="text-sm uppercase tracking-widest text-accent">The Team</span>
-            <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-              Meet our community
-            </h2>
+            <span className="text-sm uppercase tracking-widest text-accent">Leadership</span>
+            {/* <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+              Leadership
+            </h2> */}
           </div>
-          <p className="text-white/90 max-w-sm leading-relaxed">
+          {/* <p className="text-white/90 max-w-sm leading-relaxed">
             The people who shape worship, welcome neighbors, and help Red Door Church feel
             like home week after week.
-          </p>
+          </p> */}
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {members.map((member, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+          {members.map((member) => (
             <figure key={member.name} className="group">
-              <div className="relative aspect-[3/4] overflow-hidden border border-border bg-card">
-                <div
-                  className={`absolute inset-0 transition-transform duration-700 group-hover:scale-105 ${
-                    index % 2 === 0 ? "bg-accent/15" : "bg-accent/8"
-                  }`}
+              <div className="relative aspect-square overflow-hidden border border-border bg-card">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-end p-4 md:p-6 bg-gradient-to-t from-background/90 via-background/20 to-transparent">
                   <figcaption>
