@@ -1,7 +1,8 @@
 import { useEffect } from "react"
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
-import { News } from "@/components/news"
+import { FacebookNews } from "@/components/facebook-news"
+// import { News } from "@/components/news" // Threads feed — switch back when ready
 import { BasicInfo } from "@/components/basic-info"
 import { Ministries } from "@/components/ministries"
 import { ClientReviews } from "@/components/client-reviews"
@@ -30,7 +31,8 @@ export function HomePage() {
         <Ministries />
         <ClientReviews />
         {/* <Resources /> */}
-        <News />
+        <FacebookNews />
+        {/* <News /> */}
         <Cta />
         <Footer />
       </div>
