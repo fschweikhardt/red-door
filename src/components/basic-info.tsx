@@ -14,7 +14,7 @@ export function BasicInfo() {
     <section id="basic-info" className="py-24 px-4 md:px-8 bg-card border-y border-border">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-2xl">
-          <span className="text-sm uppercase tracking-widest text-accent">Basic Info</span>
+          <span className="text-sm uppercase tracking-widest text-accent">Gathering Info</span>
           <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
             Visit us
           </h2>
@@ -83,7 +83,7 @@ export function BasicInfo() {
           >
           
           </a>{" "}
-          or see the{" "}
+          see the{" "}
           <a
             href="#news"
             className="text-foreground hover:text-accent transition-colors duration-300 underline underline-offset-4"

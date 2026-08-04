@@ -1,30 +1,26 @@
 const chapters = [
   {
-    // period: "1",
     title: "Our Name",
     body: [
-      "Red Door Church is a place of refuge and pathway for all seekers, believers, sometimes believers, and wanderers. The name ‘Red Door’ is inspired by the historical use of red doors to signify a church that was/is a place of sanctuary and safety, as well as serving as a visual reminder of the work of Christ, sacrificed and risen.",
+      "Red Door Church is a place of refuge and pathway for all seekers, believers, sometimes believers, and wanderers. The name ‘Red Door’ is inspired by the historical use of red doors to signify a church that was/is a place of sanctuary and safety, as well as serving as a visual reminder of the work of Jesus Christ, crucified and risen.",
     ],
   },
   {
-    // period: "2",
     title: "Our Hope",
     body: [
       "Our hope is that those who enter our doors would feel the invitation ... Come as you are. Bring your story, joys, sorrows, questions, your spiritual journey, your full self. You are safe. You are loved. You are welcome.",
     ],
   },
   {
-    // period: "3",
     title: "Our Vibe",
     body: [
       "We are a small, but heartfelt community, with a unique co-op vibe. Our bi-vocational pastors welcome the ideas, voices, and hopes of our community, and we all take part in making Red Door Church exist and flourish.",
     ],
   },
   {
-    // period: "4",
     title: "Our Sundays",
     body: [
-      "On Sunday mornings we sit at round tables; questions, discussions, and prayers are woven into the rhythm of teaching, liturgies, and communion. By turning our chairs towards one another (not towards a pulpit), we truly see each other, learn from each other, and get to know one another’s stories. Once a month, our Sunday service ends with a potluck.",
+      "On Sunday mornings we sit at round tables; singing, questions, discussions, and prayers are woven into the rhythm of teaching, liturgies, and communion. By turning our chairs towards one another (not towards a pulpit), we truly see each other, learn from each other, and get to know one another’s stories. Once a month, our Sunday service ends with a potluck.",
     ],
   },
 ]
@@ -42,13 +38,13 @@ export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
             href="/"
             className="mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
           >
-            ← Back to home
+            ← BACK
           </a>
         )}
         <div className="max-w-3xl mb-16">
-          <span className="text-sm uppercase tracking-widest text-accent">what is red door</span>
+          <span className="text-sm uppercase tracking-widest text-accent">what does it look like to be a</span>
           <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
-            Our Heartbeat
+            refuge and pathway?
           </h2>
           {/* <p className="mt-6 text-lg text-white/90 leading-relaxed">
             Red Door Church did not begin as a program or a building. It began as a commitment —

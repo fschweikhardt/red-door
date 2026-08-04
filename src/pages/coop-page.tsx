@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Team } from "@/components/team"
+import { About } from "@/components/about"
 import { CompanyBackground } from "@/components/company-background"
 import { CompanyEthos } from "@/components/company-ethos"
 import { Footer } from "@/components/footer"
@@ -10,6 +11,7 @@ export function CoopPage() {
       <div className="relative z-10">
         <Navigation />
         <CompanyBackground showBackLink/>
+        <About />
         <Team />
         <CompanyEthos />
         <Footer />

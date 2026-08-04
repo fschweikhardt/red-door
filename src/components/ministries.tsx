@@ -1,6 +1,6 @@
 const ministries = [
   {
-    title: "Who We Are",
+    title: "Who What Why",
     description:
       "Learn more about heartbeat and history of Red Door.",
     href: "/coop",

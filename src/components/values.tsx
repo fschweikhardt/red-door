@@ -30,7 +30,7 @@ export function Values({ showBackLink }: ValuesProps) {
               href="/"
               className="mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
             >
-              ← Back to home
+              ← BACK
             </a>
         )}
         {/* <div className="max-w-3xl mb-16">

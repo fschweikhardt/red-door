@@ -1,16 +1,15 @@
 const principles = [
   {
+    title: "We Believe / Trust",
+    body: "We affirm the Nicene and Apostles’ creeds, ancient and trusted, as our starting point and foundation. We believe, because of the work and life of Jesus, there is spaciousness, both/and’s, questions, hope, gray areas, grace, and love in the Kingdom of God.",
+  },
+  {
     title: "We All Belong",
-    lead: "First and foremost, Jesus accepts all at His table & so do we. We believe ALL are beloved children of God and belong to God. The transformational work of Christ and the stunning love of God is the lens through which we read scripture, liturgies, and teach. ",
+    body: "First and foremost, Jesus accepts all at His table & so do we. We believe ALL are beloved children of God and belong to God. The transformational work of Jesus and the stunning love of God is the lens through which we read scripture, liturgies, and teach. ",
   },
   {
-    title: "We Believe",
-    lead: "While we adhere to the Apostles Creed, ancient and trusted, Red Door holds no official statement of beliefs, lists of do’s and don’t’s, or church hierarchy/patriarchy. We believe, because of the work and life of Christ, there is spaciousness, both/and’s, questions, hope, gray areas, grace, and love in the Kingdom of God.",
-  },
-  {
-    title: "Giff say something",
-    lead: "sdlkfdkslfjf  sdl fdjs flsf f  lksjdflsdkjsdflkjsdflksdjf",
-    body: "sadlfkjsf lksjsdlfkjsdlfsjkfsl kdfjdflks jfslfsjflk fsdlkf sf slf fkj lsdf sfdls dfkljsd f",
+    title: "We Gather Around THE Table",
+    body: "At the center of our Red Door is Jesus (most often symbolized in the bread and wine of the eucharist. It is here where we find the common ground of our belong and welcome. We resist the ever-present temptation to determine whether we “fit” by how much we think like, agree with, or have in common with others. ",
   },
 ]
 
@@ -22,7 +21,7 @@ export function CompanyEthos() {
           <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             {/* <span className="text-sm uppercase tracking-widest text-accent">Our Ethos</span> */}
             <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
-              Our Ethos
+              Ethos
             </h2>
             {/* <p className="mt-6 text-white/90 leading-relaxed">
               These principles shape how we worship, how we treat each other, and how we show up
@@ -39,12 +38,7 @@ export function CompanyEthos() {
                 <div className="flex items-baseline gap-6 mb-4">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground">{principle.title}</h3>
                 </div>
-                <p className="text-lg font-medium text-foreground/90 leading-relaxed mb-4">
-                  {principle.lead}
-                </p>
-                {principle.body && (
-                  <p className="text-white/90 leading-relaxed">{principle.body}</p>
-                )}
+                <p className="text-lg text-white/90 leading-relaxed">{principle.body}</p>
               </article>
             ))}
           </div>

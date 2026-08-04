@@ -36,7 +36,7 @@ export function ShowcasePage() {
               href="/"
               className="mt-6 inline-flex text-sm uppercase tracking-widest text-foreground hover:text-accent transition-colors duration-300"
             >
-              ← Back to home
+              ← BACK
             </a>
           </div>
         </div>
