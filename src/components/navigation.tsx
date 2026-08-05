@@ -4,7 +4,7 @@ import logo from "@/components/ui/RDLogo_DoorOnly.png"
 
 const navItems = [
   { label: "News", href: "#news" },
-  { label: "Co-op", href: "/coop" },
+  { label: "Church", href: "/church" },
   { label: "Kids", href: "/kids" },
 ]
 

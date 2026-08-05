@@ -28,18 +28,14 @@ const reviews = [
 
 export function ClientReviews() {
   return (
-    <section id="reviews" className="py-24 px-4 md:px-8 bg-card border-y border-border">
+    <section id="reviews" className="py-16 md:py-24 px-4 md:px-8 bg-card border-y border-border">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            {/* <span className="text-sm uppercase tracking-widest text-accent">Client Reviews</span> */}
-            <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-card-foreground">
-              The Impact of Red Door
+            <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-card-foreground">
+              Community Reflections
             </h2>
           </div>
-          {/* <p className="text-muted-foreground max-w-sm leading-relaxed text-sm">
-            Voices from our community — shared with permission.
-          </p> */}
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -59,7 +55,7 @@ export function ClientReviews() {
                     >
                       &ldquo;
                     </span>
-                    <blockquote className="relative text-xl md:text-2xl font-bold text-card-foreground leading-snug min-h-[8rem] md:min-h-[7rem]">
+                    <blockquote className="relative text-lg md:text-xl text-card-foreground leading-snug min-h-[8rem] md:min-h-[7rem] text-white/90">
                       {review.text}
                     </blockquote>
                     <figcaption className="mt-8 flex items-center gap-4">

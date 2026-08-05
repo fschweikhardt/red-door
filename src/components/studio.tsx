@@ -9,7 +9,7 @@ const highlights = [
   },
   {
     title: "We Learn From Each Other",
-    body: "We have a unique collective vibe. All voices matter - they are heard and empowered. Even our posture at Sunday gatherings of sitting at round tables, with the communion table at the center, lends to our belief that we are in this together, and all our stories and voices are essential.",
+    body: "All voices matter - they are heard and empowered. Even our posture at Sunday gatherings of sitting at round tables, with the communion table at the center, lends to our belief that we are in this together, and all our stories and voices are essential.",
   },
   {
     title: "We Are Unafraid of the Questions",
@@ -20,18 +20,14 @@ const highlights = [
 
 export function Studio() {
   return (
-    <section id="studio" className="py-24 px-4 md:px-8 bg-card">
+    <section id="studio" className="pt-24 pb-8 px-4 md:px-8 bg-card">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
             <span className="text-sm uppercase tracking-widest text-accent">HELLO AND WELCOME</span>
             <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
-              Who we are
+              Who we are...
             </h2>
-            {/* <p className="mt-6 text-white/90 leading-relaxed">
-              We partner with local businesses who care about craft — cafés, boutiques, nonprofits,
-              and founders building something worth noticing.
-            </p> */}
           </div>
 
           <div className="lg:col-span-7 space-y-0">

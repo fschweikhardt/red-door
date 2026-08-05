@@ -5,11 +5,11 @@ const principles = [
   },
   {
     title: "We All Belong",
-    body: "First and foremost, Jesus accepts all at His table & so do we. We believe ALL are beloved children of God and belong to God. The transformational work of Jesus and the stunning love of God is the lens through which we read scripture, liturgies, and teach. ",
+    body: "First and foremost, Jesus accepts all at His table & so do we. We believe ALL are beloved children of God and belong to God. The transformational work of Jesus and the stunning love of God is the lens through which we read scripture, sing, and teach.",
   },
   {
     title: "We Gather Around THE Table",
-    body: "At the center of our Red Door is Jesus (most often symbolized in the bread and wine of the eucharist. It is here where we find the common ground of our belong and welcome. We resist the ever-present temptation to determine whether we “fit” by how much we think like, agree with, or have in common with others. ",
+    body: "At the center of Red Door is Jesus - most often symbolized in the bread and wine of the eucharist. It is here where we find the common ground of our belonging and welcome.",
   },
 ]
 

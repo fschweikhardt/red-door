@@ -4,7 +4,7 @@ import { KidsPage } from "@/pages/kids-page"
 import { ShowcasePage } from "@/pages/showcase-page"
 
 function isCoopPath(pathname: string) {
-  return pathname === "/coop" || pathname === "/coop/"
+  return pathname === "/church" || pathname === "/church/"
 }
 
 function isKidsPath(pathname: string) {

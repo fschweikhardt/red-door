@@ -1,9 +1,9 @@
 const ministries = [
   {
-    title: "Who What Why",
+    title: "Ethos & Info",
     description:
-      "Learn more about heartbeat and history of Red Door.",
-    href: "/coop",
+      `What "church" means to us at Red Door.`,
+    href: "/church",
   },
   {
     title: "Red Door Kids",

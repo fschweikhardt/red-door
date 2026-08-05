@@ -8,7 +8,6 @@ import { Ministries } from "@/components/ministries"
 import { ClientReviews } from "@/components/client-reviews"
 import { Studio } from "@/components/studio"
 import { Cta } from "@/components/cta"
-import { Footer } from "@/components/footer"
 import { Welcome } from "@/components/welcome"
 
 export function HomePage() {
@@ -30,11 +29,8 @@ export function HomePage() {
         <Studio />
         <Ministries />
         <ClientReviews />
-        {/* <Resources /> */}
         <FacebookNews />
-        {/* <News /> */}
         <Cta />
-        <Footer />
       </div>
     </main>
   )

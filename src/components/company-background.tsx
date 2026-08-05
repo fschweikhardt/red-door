@@ -14,7 +14,7 @@ const chapters = [
   {
     title: "Our Vibe",
     body: [
-      "We are a small, but heartfelt community, with a unique co-op vibe. Our bi-vocational pastors welcome the ideas, voices, and hopes of our community, and we all take part in making Red Door Church exist and flourish.",
+      "We are a small, but heartfelt community, with a unique collective vibe. Our bi-vocational pastors welcome the ideas, voices, and hopes of our community, and we all take part in making Red Door Church exist and flourish.",
     ],
   },
   {
