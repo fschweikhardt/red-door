@@ -31,8 +31,11 @@ type CompanyBackgroundProps = {
 
 export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
   return (
-    <section id="background" className="py-24 px-4 pt-36 md:px-8 md:pt-48 bg-card border-t border-border">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="background"
+      className="background-dots-fade pb-16 md:pb-24 px-4 pt-36 md:px-8 md:pt-48"
+    >
+      <div className="relative z-[1] max-w-7xl mx-auto">
         {showBackLink && (
           <a
             href="/"
@@ -41,15 +44,11 @@ export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
             ← BACK
           </a>
         )}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 pt-12">
           <span className="text-sm uppercase tracking-widest text-accent">what does it look like to be a</span>
-          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
+          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-tight">
             refuge and pathway?
           </h2>
-          {/* <p className="mt-6 text-lg text-white/90 leading-relaxed">
-            Red Door Church did not begin as a program or a building. It began as a commitment —
-            to worship God, love our neighbors, and keep the door open for anyone who wants to belong.
-          </p> */}
         </div>
 
         <div className="space-y-0 border-t border-border">
@@ -60,12 +59,16 @@ export function CompanyBackground({ showBackLink }: CompanyBackgroundProps) {
                 index < chapters.length - 1 ? "border-b border-border" : ""
               }`}
             >
-              <div className="lg:col-span-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-card-foreground leading-snug">
+              <div className="lg:col-span-4 flex flex-col justify-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-snug">
                   {chapter.title}
                 </h3>
               </div>
-              <div className="lg:col-span-8 space-y-6">
+              <div
+                className={`lg:col-span-8 space-y-6 border border-border p-8 md:p-14 lg:border-l ${
+                  index === 0 ? "bg-card" : "bg-card/50"
+                }`}
+              >
                 {chapter.body.map((paragraph) => (
                   <p key={paragraph.slice(0, 24)} className="text-lg text-white/90 leading-relaxed">
                     {paragraph}

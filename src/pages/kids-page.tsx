@@ -1,8 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { KidsHero } from "@/components/kids-hero"
 import { Values } from "@/components/values"
-// import { Testimonials } from "@/components/testimonials"
-import { Footer } from "@/components/footer"
+import { Cta } from "@/components/cta"
 
 export function KidsPage() {
   return (
@@ -11,8 +10,7 @@ export function KidsPage() {
         <Navigation />
         <KidsHero showBackLink/>
         <Values />
-        {/* <Testimonials /> */}
-        <Footer />
+        <Cta />
       </div>
     </main>
   )

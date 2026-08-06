@@ -107,6 +107,50 @@
   z-index: 0;
 }
 
+/* Refuge section: reveal page dots top → bottom (matches Ministries openness) */
+.background-dots-fade {
+  position: relative;
+  isolation: isolate;
+}
+.background-dots-fade::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--background) 22%,
+    color-mix(in oklch, var(--background) 55%, transparent) 38%,
+    color-mix(in oklch, var(--background) 15%, transparent) 52%,
+    transparent 68%
+  );
+}
+
+/* Ethos + footer tail: hide dots toward page bottom */
+.background-dots-fade-out {
+  position: relative;
+  isolation: isolate;
+  min-height: 0;
+}
+.background-dots-fade-out::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 18%,
+    color-mix(in oklch, var(--background) 15%, transparent) 38%,
+    color-mix(in oklch, var(--background) 55%, transparent) 52%,
+    var(--background) 68%,
+    var(--background) 100%
+  );
+}
+
 /* Layered hero title: offset outline + foreground fill */
 .hero-title-line {
   position: relative;

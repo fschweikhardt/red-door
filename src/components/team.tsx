@@ -18,7 +18,7 @@ const members = [
 
 export function Team() {
   return (
-    <section id="team" className="py-24 px-4 md:px-8 pt-32">
+    <section id="team" className="pb-8 md:pb-16 px-4 md:px-8 pt-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
@@ -26,7 +26,7 @@ export function Team() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 gap-y-12 md:gap-y-4 border border-border bg-card/50 p-8 md:p-10">
           {members.map((member) => (
             <figure key={member.name} className="group">
               <div className="relative aspect-square overflow-hidden border border-border bg-card">

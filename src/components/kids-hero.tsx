@@ -4,7 +4,7 @@ type KidsHeroProps = {
 
 export function KidsHero({ showBackLink }: KidsHeroProps) {
   return (
-    <section id="background" className="px-4 pt-36 md:px-8 md:pt-48 bg-card border-t border-border">
+    <section id="background" className="px-4 pt-36 pb-16 md:px-8 md:pt-48 md:pb-24">
       <div className="max-w-7xl mx-auto">
         {showBackLink && (
           <a
@@ -14,9 +14,9 @@ export function KidsHero({ showBackLink }: KidsHeroProps) {
             ← BACK
           </a>
         )}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 pt-12 border border-border bg-card/50 p-8 md:p-10">
           <span className="text-sm uppercase tracking-widest text-accent">RD Kids</span>
-          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-card-foreground leading-tight">
+          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-tight">
             Simple & Rooted in Love
           </h2>
           <p className="mt-6 text-lg text-white/90 leading-relaxed">

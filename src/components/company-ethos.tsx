@@ -15,18 +15,13 @@ const principles = [
 
 export function CompanyEthos() {
   return (
-    <section id="ethos" className="py-24 px-4 md:px-8">
+    <section id="ethos" className="relative z-[1] pt-12 md:pt-24 pb-12 md:pb-24 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
-            {/* <span className="text-sm uppercase tracking-widest text-accent">Our Ethos</span> */}
             <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
               Ethos
             </h2>
-            {/* <p className="mt-6 text-white/90 leading-relaxed">
-              These principles shape how we worship, how we treat each other, and how we show up
-              in Bloomington. They are not slogans — they are commitments we return to again and again.
-            </p> */}
           </div>
 
           <div className="lg:col-span-8 space-y-0">
