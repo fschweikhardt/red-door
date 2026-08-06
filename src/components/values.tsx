@@ -1,7 +1,3 @@
-type ValuesProps = {
-  showBackLink?: boolean
-}
-
 const values = [
   {
     word: "Babies & Toddlers",
@@ -21,25 +17,10 @@ const values = [
   },
 ]
 
-export function Values({ showBackLink }: ValuesProps) {
+export function Values() {
   return (
-    <section id="values" className="py-24 px-4 md:px-8 bg-card border-y border-border">
+    <section id="values" className="py-12 md:py-24 px-4 md:px-8 bg-card border-y border-border">
       <div className="max-w-7xl mx-auto">
-        {showBackLink && (
-            <a
-              href="/"
-              className="mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-white/90 hover:text-accent transition-colors duration-300"
-            >
-              ← BACK
-            </a>
-        )}
-        {/* <div className="max-w-3xl mb-16">
-          <span className="text-sm uppercase tracking-widest text-accent">Our Values</span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-            Kids Groups of All Ages
-          </h2>
-        </div> */}
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((value, index) => (
             <div

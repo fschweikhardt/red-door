@@ -14,7 +14,7 @@ export function KidsHero({ showBackLink }: KidsHeroProps) {
             ← BACK
           </a>
         )}
-        <div className="max-w-3xl mb-16 pt-12 border border-border bg-card/50 p-8 md:p-10">
+        <div className="max-w-3xl mt-8 mb-8 pt-12 border border-border bg-card/50 p-8 md:p-10">
           <span className="text-sm uppercase tracking-widest text-accent">RD Kids</span>
           <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-tight">
             Simple & Rooted in Love
