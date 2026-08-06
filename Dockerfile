@@ -18,7 +18,6 @@ COPY --from=build /app/dist ./dist
 
 ENV NODE_ENV=production
 ENV PORT=80
-ENV THREADS_DATA_DIR=/data
 
 RUN mkdir -p /data
 
